@@ -24,7 +24,7 @@ app.add_middleware(
 @app.get("/")
 async def read_root():
     logger.info("Root endpoint accessed")
-    return {"message": "Welcome to the Audio Classification API"}
+    return {"message": "Welcome to the BirdWhisper API"}
 
 @app.post("/upload-audio/")
 async def upload_audio(file: UploadFile = File(...)):
