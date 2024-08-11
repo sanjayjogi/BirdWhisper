@@ -7,7 +7,7 @@ Welcome to the BirdWhisper project! This API allows you to upload audio files, e
 - Upload audio files for classification
 - Extract audio features using `librosa`
 - Noise reduction and high-pass filtering using `noisereduce` and `scipy`
-- Classification using a pre-trained machine learning model
+- Classification using a machine learning model
 - CORS support for cross-origin requests
 
 ## Project Structure
@@ -49,6 +49,7 @@ Start the FastAPI application:
 
 ```bash
 uvicorn main:app --reload
+```
 
 ### Upload Audio
 
@@ -62,9 +63,9 @@ uvicorn main:app --reload
 
 #### Response
 
-```json
+json
 {
-  "filename": "example.wav",
-  "filepath": "files/example.wav",
+  "filename": "example.mp3",
+  "filepath": "files/example.mp3",
   "prediction": [1]
 }
