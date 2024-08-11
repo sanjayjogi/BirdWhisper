@@ -3,6 +3,9 @@ from fastapi.responses import JSONResponse
 from model import load_model
 from feature_extraction import feature_extractor
 from fastapi.middleware.cors import CORSMiddleware
+import os
+
+os.makedirs("files", exist_ok=True)
 
 app = FastAPI()
 
