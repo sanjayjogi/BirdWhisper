@@ -12,12 +12,13 @@ Welcome to the BirdWhisper project! This API allows you to upload audio files, e
 
 ## Project Structure
 
-├── main.py # Main FastAPI application
-├── model.py # Model loading utility
-├── feature_extraction.py # Feature extraction from audio files
-├── audio_processing.py # Noise reduction and high-pass filter
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
+├── main.py                # Main FastAPI application
+├── model.py               # Model loading utility
+├── feature_extraction.py  # Feature extraction from audio files
+├── audio_processing.py    # Noise reduction and high-pass filter
+├── requirements.txt       # Python dependencies
+└── README.md              # Project documentation
+
 
 ## Installation
 
@@ -64,8 +65,10 @@ uvicorn main:app --reload
 #### Response
 
 json
+```bash
 {
   "filename": "example.mp3",
   "filepath": "files/example.mp3",
   "prediction": [1]
 }
+```
