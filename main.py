@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from model import load_model
 from feature_extraction import feature_extractor
+from pydantic import BaseModel
 
 os.makedirs("files", exist_ok=True)
 
@@ -48,3 +49,10 @@ async def upload_audio(file: UploadFile = File(...)):
         logger.error(f"Error processing file {file.filename}: {e}")
         raise HTTPException(status_code=500, detail="Internal Server Error")
 
+class Feedback(BaseModel):
+    fileName: str
+    feedBack: str
+
+@app.post("/feedback/")
+async def feedback(feedback: Feedback):
+    return JSONResponse(content={"message": "Feedback received"})

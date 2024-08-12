@@ -2,6 +2,8 @@
 
 Welcome to the BirdWhisper project! This API allows you to upload audio files, extract features, and classify them using a pre-trained machine learning model. It is designed specifically for bird audio classification.
 
+**Project is hosted on [https://birdwhisper.onrender.com/](https://birdwhisper.onrender.com/)**
+
 ## Features
 
 - Upload audio files for classification
